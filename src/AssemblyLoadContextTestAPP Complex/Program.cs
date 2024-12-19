@@ -15,7 +15,7 @@ namespace AssemblyLoadContextTestAPP
                 if (args.Length == 1 && args[0] == "/d")
                 {
                     Console.WriteLine("Waiting for any key...");
-                    Console.ReadLine();
+                    args[0] = Console.ReadLine();
                 }
 
                 string[] pluginPaths = new string[]
