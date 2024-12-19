@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading> <!-- Among other things, this will copy all of its dependencies to the output of the project. -->
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\INT\INT.csproj">
+      <Private>false</Private> <!-- This tells MSBuild to not copy INT.dll to the output directory for LIB1. -->
+      <ExcludeAssets>runtime</ExcludeAssets> <!-- This setting has the same effect as <Private>false</Private> but works on package references that the PluginBase project or one of its dependencies may include. -->
+    </ProjectReference>
+  </ItemGroup>
+
+</Project>
