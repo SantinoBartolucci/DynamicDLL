@@ -15,7 +15,7 @@ namespace AssemblyLoadContextTestAPP
                 if (args.Length == 1 && args[0] == "/d")
                 {
                     Console.WriteLine("Waiting for any key...");
-                    Console.ReadLine();
+                    args[0] = Console.ReadLine();
                 }
 
                 string[] pluginPaths = new string[]
@@ -23,6 +23,7 @@ namespace AssemblyLoadContextTestAPP
                     // Paths to plugins to load.
                     @"LIB1\bin\Debug\net8.0\LIB1.dll",
                     @"LIB2\bin\Debug\net8.0\LIB2.dll",
+                    @"JsonPlugin\bin\Debug\net8.0\JsonPlugin.dll",
                 };
 
                 IEnumerable<IPlugin> plugins = pluginPaths.SelectMany(pluginPath =>
