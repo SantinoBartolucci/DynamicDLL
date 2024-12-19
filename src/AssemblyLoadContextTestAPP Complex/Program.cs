@@ -23,6 +23,7 @@ namespace AssemblyLoadContextTestAPP
                     // Paths to plugins to load.
                     @"LIB1\bin\Debug\net8.0\LIB1.dll",
                     @"LIB2\bin\Debug\net8.0\LIB2.dll",
+                    @"JsonPlugin\bin\Debug\net8.0\JsonPlugin.dll",
                 };
 
                 IEnumerable<IPlugin> plugins = pluginPaths.SelectMany(pluginPath =>

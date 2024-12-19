@@ -1,7 +1,8 @@
 {
   "profiles": {
     "AssemblyLoadContextTestAPP Complex": {
-      "commandName": "Project"
+      "commandName": "Project",
+      "commandLineArgs": "json"
     }
   }
 }
